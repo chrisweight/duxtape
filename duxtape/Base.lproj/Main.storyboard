@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="duxtape" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-na-51A" userLabel="AddButton">
+                                <rect key="frame" x="16" y="28" width="288" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.44951025309243209" blue="0.33984985830912118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PF0-ut-lCv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="SubtractButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-XE-YzX" userLabel="SubtractButton">
+                                <rect key="frame" x="16" y="81" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.37598566553655077" green="0.33503223365054768" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SUBTRACT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KwY-Ds-ELE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CounterLabel" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pO-tQ-xRx" userLabel="CounterLabel">
+                                <rect key="frame" x="16" y="140" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="UnsubscribeButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-3y-RZH" userLabel="UnsubscribeButton">
+                                <rect key="frame" x="16" y="518" width="288" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.49516339393600606" blue="0.94718629331801107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Unsubscribe">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onUnsubscribe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcg-ZW-MvJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="VKX-3y-RZH" secondAttribute="trailing" id="2G4-PW-l6h"/>
+                            <constraint firstItem="Qfr-XE-YzX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2VG-KH-7o3"/>
+                            <constraint firstItem="2pO-tQ-xRx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="35U-E9-Or5"/>
+                            <constraint firstItem="fzO-na-51A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="81w-Ee-U8H"/>
+                            <constraint firstItem="2pO-tQ-xRx" firstAttribute="top" secondItem="Qfr-XE-YzX" secondAttribute="bottom" constant="29" id="B3V-dd-mGL"/>
+                            <constraint firstItem="VKX-3y-RZH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ChM-qe-zbZ"/>
+                            <constraint firstItem="fzO-na-51A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FjV-Tg-JKp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VKX-3y-RZH" secondAttribute="bottom" constant="20" id="JNl-cZ-VOd"/>
+                            <constraint firstItem="fzO-na-51A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QUj-qH-4TP"/>
+                            <constraint firstItem="Qfr-XE-YzX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VMf-ea-Xcd"/>
+                            <constraint firstItem="fzO-na-51A" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZLp-Tv-cLo"/>
+                            <constraint firstItem="VKX-3y-RZH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evQ-mf-PuW"/>
+                            <constraint firstItem="Qfr-XE-YzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hpN-du-kmB"/>
+                            <constraint firstItem="Qfr-XE-YzX" firstAttribute="top" secondItem="fzO-na-51A" secondAttribute="bottom" constant="23" id="kib-Hv-PLa"/>
+                            <constraint firstItem="2pO-tQ-xRx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n80-EC-U5h"/>
+                            <constraint firstItem="2pO-tQ-xRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qA4-TU-HYp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counter" destination="2pO-tQ-xRx" id="Phb-tK-y6L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+</document>
